@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <!-- script  onsubmit="sendEmail()"-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.io-encrypt/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <form method="POST" id="sendemail" action = "/">
+        <label for="email">Enter your email</label>
+        <input type="email" id = 'email'>
+        <label for="text">Enter some text</label>
+        <input type="text" id= 'text'>
+        <input type="submit" id= "submit">
+        <button type="button" onclick="sendEmailFake(document.getElementById('email').value, document.getElementById('text').value)">Submit Fake</button>
+    </form>
+</body>
+</html>
