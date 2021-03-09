@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Suspension of Studies Request Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, label, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+      z-index: 2;
+ line-height: 83px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: 
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+    }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #aa00b3;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #aa00b3;
+      color: #000000;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #aa00b3;
+      }
+      .item i {
+      right: 1%;
+      top: 30px;
+      z-index: 1;
+      }
+ .week {
+      display:flex;
+      justfiy-content:space-between;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+  display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .question-answer label {
+      display: block;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid  #aa00b3;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid  #aa00b3;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .flax {
+      display:flex;
+      justify-content:space-around;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #aa00b3;
+      font-size: 16px;
+      color: #fff;
+cursor: pointer;
+      }
+      button:hover {
+      background:  #aa00b3;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .name-item div {
+      width: calc(50% - 20px);
+      }
+      .name-item div input {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form>
+        <div class="banner">
+          <h1>Student Suspension of Studies Request Form&nbsp;</h1>
+        </div>
+        <br/>
+        <fieldset>
+          <legend>RGU - Student Suspension of Studies Request Form&nbsp; &nbsp;&nbsp;</legend>
+			
+          <p>You may seek advice on completion of the Suspension of Studies Request Form from your Course Leader. Also, refer to Academic Regulation A2: Admission and Enrolment, paragraph 9: Temporary Suspension of Studies, available at www.rgu.ac.uk/academicregulations. </p>
+			<br>
+			<p>Please note:</p>
+			 <br>		
+			<p>- There may be changes to your course during an approved period of suspension.</p>
+			<br>
+<p>- Access to University services and facilities shall be withdrawn for the duration of a period of suspension. As such, as a suspended student, you shall not be entitled to submit/undertake assessments or seek any academic support or guidance during that period.</p>
+			  <br>
+<p>- International students studying on a Tier 4 student visa must first seek advice from an International Student Adviser (email isa@rgu.ac.uk) before completing this form. Any suspension or withdrawal from studies will be reported to the UK Visas and Immigration (UKVI) and will affect your Tier 4 student visa status.  You will be required to leave the UK as soon as possible and you will be required to apply for a new Tier 4 student visa in your home country in order to resume your studies. Please be aware that your form will not be considered until you have sought advice from an International Student Advisor and the form signed and dated to confirm this.</p>
+			  <br />
+
+			  FOR COMPLETION BY THE INTERNATIONAL STUDENT ADVISOR CONFIRMING MEETING WITH THE STUDENT NAMED BELOW&nbsp;</p>
+<div class="item">
+        <label for="fname"> Student Name</label>
+            <input id="StudentName" type="text" name="StudentName" />
+          </div>
+<div class="item">
+        <label for="DateOfMeeting">Date of Meeting&nbsp; &nbsp; <span>&nbsp;</span></label>
+            <input id="DateOfMeeting" type="date" name="DateOfMeeting" />
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+ <div class="item">
+</div>
+  <div class="item">
+        <label for="Sig"> Signature of International Student Advisor</label>
+            <input id="Sig" type="text" name="Sig" />
+          </div>
+<div class="item">
+        <label for="date">Date&nbsp; &nbsp; &nbsp;&nbsp; <span>&nbsp;</span></label>
+            <input id="Tdate" type="date" name="Tdate" />
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+ 
+  <div class="item">
+            <label for="Surname"> Surname/Family Name</label>
+            <input id="Surname" type="text" name="Surname" />
+          </div>
+          <div class="item">
+            <label for="Forename">Forename(s)</label>
+            <input id="Forename" type="text" name="Forename" />
+          </div>
+          <div class="item">
+            <label for="Title">Title</label>
+            <input id="Title" type="text" name="Title" />
+          </div>
+		  <div class="item">
+            <label for="Address">Postal Address</label>
+            <input id="Address" type="text" name="Address" />
+          </div>
+		<div class="item">
+            <label for="Telephone">Telephone Number(s)</label>
+            <input id="Telephone" type="text" name="Telephone" />
+          </div>
+		<div class="item">
+            <label for="Email">Email Address</label>
+            <input id="Email" type="text" name="Email" />
+          </div>
+		<div class="item">
+            <label for="Enrolment">RGU Enrolment Number</label>
+            <input id="Enrolment" type="text" name="Enrolment" />
+          </div>
+		<div class="item">
+            <label for="School">School</label>
+            <input id="School" type="text" name="School" />
+          </div>
+		<div class="item">
+            <label for="Course">Course</label>
+            <input id="Course" type="text" name="Course" />
+          </div>
+		<div class="item">
+            <label for="Stage">Stage</label>
+            <input id="Stage" type="text" name="Stage" />
+          </div>
+			
+		<p class="formfield">
+  <label for="textarea">Reason for Suspension</label>
+  <textarea id="textarea" rows="5">Please provide details of your reasons for requesting a suspension of studies, including whether you have previously had a period of suspension on your current course
+  	</textarea>
+  			</p>
+  
+  		<p class="formfield">
+  <label for="textarea">Proposed Duration of Suspension</label>
+  <textarea id="textarea" rows="5">Please indicate the proposed duration of suspension, including commencement and end dates. Note: Normally a student will only be permitted to suspend studies once during his/her course of study and for a period not normally exceeding one calendar year
+
+  	</textarea>
+  			</p>
+  
+    	<p class="formfield">
+  <label for="textarea">List of Documentary Evidence submitted with this form</label>
+  <textarea id="textarea" rows="5">Please provide details of the documentary evidence to support your request, for example medical certification
+
+  	</textarea>
+  			</p>
+  
+     <div class="item">
+        <label for="DateOfMeeting">Date&nbsp; &nbsp; <span>&nbsp;</span></label>
+            <input id="DateOfMeeting" type="date" name="DateOfMeeting" />
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+		  
+        <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+</html>

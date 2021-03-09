@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Suspension of Studies Request Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, label, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+      z-index: 2;
+ line-height: 83px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: 
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+    }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #aa00b3;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #aa00b3;
+      color: #000000;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #aa00b3;
+      }
+      .item i {
+      right: 1%;
+      top: 30px;
+      z-index: 1;
+      }
+ .week {
+      display:flex;
+      justfiy-content:space-between;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+  display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .question-answer label {
+      display: block;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid  #aa00b3;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid  #aa00b3;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .flax {
+      display:flex;
+      justify-content:space-around;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #aa00b3;
+      font-size: 16px;
+      color: #fff;
+cursor: pointer;
+      }
+      button:hover {
+      background:  #aa00b3;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .name-item div {
+      width: calc(50% - 20px);
+      }
+      .name-item div input {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form>
+        <div class="banner">
+          <h1>Deferral Request Form Self-Certification&nbsp;</h1>
+        </div>
+        <br/>
+        <fieldset>
+          <legend>RGU - Deferral Request Form Self-Certification&nbsp; &nbsp;</legend>
+			
+          <p>The University operates a Fit to Sit Policy which means that if you undertake an assessment then you are declaring yourself well enough to do so.  </p>
+			<br>
+			<p>This form should be used only if you are claiming extenuating circumstances in relation to non-submission of an assessment or non-attendance at an examination . </p>
+			 <br>
+				<p>The form should be completed and submitted through your RGU email account to your School at the designated email address. The email address can be found at the following link: www.rgu.ac.uk/academicregulations. The completed form should arrive no later than 5 working days after the assessment submission deadline date and/or the date of the examination.  </p>
+			<br>
+			<p><b>Forms received after the five working day period will not be considered.</b></p>
+			
+<div class="item">
+        <label for="fname"> Surname/Family Name</label>
+            <input id="StudentName" type="text" name="StudentName" />
+          </div>
+  <div class="item">
+        <label for="Sig"> Title</label>
+            <input id="Sig" type="text" name="Sig" />
+          </div>
+  <div class="item">
+        <label for="Sig"> Forename(s)</label>
+            <input id="Sig" type="text" name="Sig" />
+          </div>
+ 
+  <div class="item">
+            <label for="Surname"> Address where you are currently staying</label>
+            <input id="Surname" type="text" name="Surname" />
+          </div>
+          <div class="item">
+            <label for="Forename">Telephone Number(s)</label>
+            <input id="Forename" type="text" name="Forename" />
+          </div>
+          <div class="item">
+            <label for="Title">RGU Email Address</label>
+            <input id="Title" type="text" name="Title" />
+          </div>
+		  <div class="item">
+            <label for="Address">RGU Enrolment Number</label>
+            <input id="Address" type="text" name="Address" />
+          </div>
+		<div class="item">
+            <label for="Telephone">School</label>
+            <input id="Telephone" type="text" name="Telephone" />
+          </div>
+		<div class="item">
+            <label for="Email">Course</label>
+            <input id="Email" type="text" name="Email" />
+          </div>
+		<div class="item">
+            <label for="Enrolment">Stage</label>
+            <input id="Enrolment" type="text" name="Enrolment" />
+          </div>
+			
+		<p class="formfield">
+  <label for="textarea">Section 1: Modules affected</label>
+  <textarea id="textarea" rows="5">Module Number, Module Title, Coursework submission Date and Exam Date
+  	</textarea>
+  			</p>
+  
+<div class="question">
+            <label>SECTION 2: Reason for requesting a deferral of your assessment
+Please indicate the reason(s) you are submitting the form by selecting the relevant option(s):
+</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_1" name="participants"/>
+                <label for="radio_1" class="radio"><span>Non-submission</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_2" name="Deferral"/>
+                <label for="radio_2" class="radio"><span>Non-attendance at an examination</span></label>
+              </div>
+            </div>
+          </div>
+			
+			<p class="formfield">
+  <label for="textarea">Section 3: Non-Submission of Assessment/Non-Attendance at an Examination</label>
+  <textarea id="textarea" rows="5">Describe concisely the circumstances which had an adverse effect on your ability to undertake an assessment. It is important that you include relevant dates. Completion of this section is compulsory if you are making a claim on the basis of non-submission/non-attendance at an examination.
+  	</textarea>
+  			</p>
+ 
+  <p class="formfield">
+  <label for="textarea">SECTION 4: Declaration <br> By submitting this form though your RGU email address you are declaring:
+ - the above information to be accurate to the best of your knowledge; and
+ - that you understand the information provided in support of your claim will be treated in confidence unless disclosure is necessary to progress the claim.
+Please be aware the University’s Student Misconduct Procedure, as contained in Academic Regulation A3: Section 2, may be applied should there be any doubts about the authenticity of the claim or documents submitted to support the claim.</b></label>
+<div class="item">
+        <label for="fname"> Student Name</label>
+            <input id="StudentName" type="text" name="StudentName" />
+  </div>
+     <div class="item">
+        <label for="DateOfMeeting">Date&nbsp; &nbsp; <span>&nbsp;</span></label>
+            <input id="DateOfMeeting" type="date" name="DateOfMeeting" />
+            <i class="fas fa-calendar-alt"></i>
+  </div>
+		  
+  <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+</html>
